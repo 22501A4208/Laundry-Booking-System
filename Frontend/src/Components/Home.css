@@ -1,0 +1,89 @@
+/* Full-page Layout */
+.home-container {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(to right, #38a169, #3182ce); /* Green to Blue gradient */
+    color: white;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Left Section - Content */
+  .home-content {
+    flex: 1; /* 50% width */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .home-header {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .home-description {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Card Styling */
+  .home-card {
+    background: rgba(255, 255, 255, 0.2); /* White with transparency */
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 400px;
+    margin-top: 20px;
+  }
+  
+  .home-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 15px;
+  }
+  
+  /* Button Container */
+  .button-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  /* Button Styling */
+  .home-button {
+    background-color: #2f855a; /* Green */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .home-button:hover {
+    background-color: #276749; /* Darker Green */
+  }
+  
+  /* Right Section - Image */
+  .home-image-container {
+    flex: 1; /* 50% width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .home-image {
+    max-width: 80%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  

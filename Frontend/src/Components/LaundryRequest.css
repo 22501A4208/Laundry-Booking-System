@@ -1,0 +1,157 @@
+/* 🌟 Page Layout */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 20px;
+}
+
+/* 🎭 Stylish Card */
+.request-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    width: 90%;
+    max-width: 750px;
+    transition: 0.3s ease-in-out;
+    text-align: center;
+}
+
+.request-card:hover {
+    transform: translateY(-2px);
+}
+
+/* 📌 Title */
+.card-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* 📌 Layout */
+.request-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* 📌 Clothing Section */
+.clothing-section {
+    flex: 1;
+    min-width: 280px;
+    padding: 15px;
+}
+
+/* 📌 Pickup Details Section */
+.pickup-details {
+    flex: 1;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+}
+
+/* 🔹 Border to separate sections */
+.clothing-section,
+.pickup-details {
+    border: 1.5px solid #ccc; /* Thin subtle border */
+    border-radius: 8px;
+    background: #f9f9f9;
+}
+
+/* 📌 Clothing Grid */
+.clothing-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.clothing-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.clothing-item label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+/* 📌 Pickup Input Fields */
+.pickup-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* 📌 Inputs */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.input-field {
+    width: 100%;
+    padding: 8px;
+    border: 1.5px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: all 0.3s ease-in-out;
+    background-color: #fff;
+    max-width: 200px;
+}
+
+.input-field:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+/* ✅ Submit Button */
+.submit-button {
+    width: 50%;
+    background: #007bff;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+.submit-button:hover {
+    background: #0056b3;
+    transform: scale(1.03);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* 🔄 Responsive Design */
+@media (max-width: 768px) {
+    .request-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .clothing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .input-field {
+        max-width: 100%;
+    }
+
+    .submit-button {
+        width: 100%;
+    }
+}

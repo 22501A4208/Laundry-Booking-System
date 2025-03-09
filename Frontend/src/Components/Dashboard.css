@@ -1,0 +1,129 @@
+/* Dashboard container */
+.dashboard-container {
+    display: flex;
+    height: 100vh; /* Adjusted height */
+    width: 100vw;
+    background: #f8f9fa;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+/* Sidebar styling */
+.sidebar {
+    width: 300px; /* Increased width */
+    background: #2d293d;
+    color:white;
+    padding: 16px; /* Increased padding */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+/* Sidebar Title */
+.sidebar-title {
+    font-size: 22px; /* Increased for better visibility */
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Sidebar Menu */
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Added gap for better spacing */
+}
+
+.sidebar-item {
+    padding: 12px;
+    cursor: pointer;
+    text-align: center;
+    background: #34495e;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    font-size: 16px;
+}
+
+.sidebar-item:hover,
+.sidebar-item.active {
+    background: #1abc9c;
+}
+
+/* Logout Button - Now Visible & Bigger */
+.logout-button {
+    background: #e74c3c;
+    color: white;
+    padding: 25px; /* Increased padding for better visibility */
+    text-align: center;
+    margin-top: 100px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-size: 16px;
+    margin-top: auto; /* Pushes it to the bottom */
+}
+
+.logout-button:hover {
+    background: #c0392b;
+}
+
+/* Main Content Area */
+.dashboard-content {
+    flex: 1;
+    padding: 16px; /* Adjusted padding */
+    background: #ecf0f1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Price Details Heading */
+.price-heading {
+    font-size: 28px; /* Slightly smaller */
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #2c3e50;
+    text-align: center;
+    width: 100%;
+}
+
+/* Pricing Table */
+.pricing-table {
+    width: 100%;
+    max-width: 100%; /* Takes full width */
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    height: 70vh; /* Reduced table height slightly */
+}
+
+.pricing-table th,
+.pricing-table td {
+    padding: 20px; /* Adjusted padding */
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 20px;
+}
+
+.pricing-table th {
+    background: #6195c9;
+    color: white;
+    font-weight: bold;
+}
+
+.pricing-table tr:nth-child(even) {
+    background: #f2f2f2;
+}
+
+.pricing-table tr:hover {
+    background: #d1f2eb;
+    transition: background 0.3s ease-in-out;
+}
