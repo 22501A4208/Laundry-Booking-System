@@ -22,13 +22,14 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:5000/api/register", formData);
-      toast.success(response.data.message);
-      navigate("/dashboard"); // Redirect to Dashboard after successful registration
+        const response = await axios.post("http://localhost:5001/api/register", formData);
+        toast.success(response.data.message);
+        navigate("/login"); // Redirect to Login page after successful registration
     } catch (error) {
-      toast.error(error.response.data.message);
+        toast.error(error.response?.data?.message || "Registration failed");
     }
-  };
+};
+
 
   return (
     <div className="register-container">

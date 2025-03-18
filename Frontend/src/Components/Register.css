@@ -88,5 +88,17 @@
       transform: translateY(0);
     }
   }
+  .register-input {
+    color: #333; /* Change text color to dark gray */
+    background-color: #fff; /* Ensure background is white */
+    border: 1px solid #ccc; /* Light border for visibility */
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  .register-input::placeholder {
+    color: #888; /* Light gray placeholder color */
+  }
+  
   
   

@@ -1,38 +1,93 @@
+/* Center Order Status in the second half of the page */
 .status-container {
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .status-title {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  .status-steps {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-  }
-  
-  .status-step {
-    padding: 10px 20px;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    font-size: 18px;
-    background-color: #f4f4f4;
-    transition: all 0.3s ease;
-  }
-  
-  .status-step.active {
-    background-color: #4caf50;
-    color: white;
-    border-color: #388e3c;
-  }
-  
-  .status-message {
-    margin-top: 20px;
-    font-size: 18px;
-    font-weight: bold;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end; /* Pushes it to the lower half */
+  height: 50vh; /* Aligns to the lower half */
+  text-align: center;
+  padding: 20px;
+}
+
+/* Title Styling */
+.status-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2c3e50; /* Dark blue for visibility */
+  margin-bottom: 20px;
+}
+
+/* Status Steps - Centered */
+.status-steps {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Status Step Boxes */
+.status-step {
+  padding: 10px 20px;
+  border: 2px solid #2c3e50; /* Dark blue border */
+  border-radius: 10px;
+  font-size: 18px;
+  background-color: #34495e; /* Dark gray-blue background */
+  color: white; /* White text for contrast */
+  transition: all 0.3s ease;
+}
+
+/* Active Step - More Visible */
+.status-step.active {
+  background-color: #1abc9c; /* Green background */
+  color: white;
+  border-color: #16a085;
+}
+
+/* Status Message */
+.status-message {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+/* Pop-Up Styling */
+.status-popup {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(44, 62, 80, 0.9); /* Dark blue pop-up */
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 14px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Ensure pop-ups stand out */
+.status-popup.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.status-popup.hide {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+/* Buttons */
+.status-button {
+  padding: 8px 16px;
+  border: none;
+  background: #3498db;
+  color: white;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 15px;
+}
+
+.status-button:hover {
+  background: #2980b9;
+}

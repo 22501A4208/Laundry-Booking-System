@@ -46,7 +46,7 @@ const LaundryRequest = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/laundry-request",
+        "http://localhost:5001/api/laundry-request",
         { name, ...formData },
         { headers: { Authorization: `Bearer ${storedToken}` } }
       );

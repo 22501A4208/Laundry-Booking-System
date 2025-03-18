@@ -38,9 +38,7 @@ const Dashboard = () => {
             Order Status
           </li>
         </ul>
-        <button className="logout-button" onClick={handleLogout}>
-          Logout
-        </button>
+        
       </div>
 
       {/* Main Content */}

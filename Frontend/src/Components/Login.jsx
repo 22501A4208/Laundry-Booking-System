@@ -3,7 +3,9 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
-import "./Login.css"; // Importing the CSS file
+import "./Login.css";
+//import "../styles/Login.css"; // Adjust path if needed
+ // Importing the CSS file
 
 const Login = () => {
   const [formData, setFormData] = useState({ email: "", password: "" });
@@ -16,7 +18,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:5000/api/login", formData);
+      const response = await axios.post("http://localhost:5001/api/login", formData);
       console.log(response.data)
       localStorage.setItem("token",response.data.token)
       localStorage.setItem("email",response.data.email)
