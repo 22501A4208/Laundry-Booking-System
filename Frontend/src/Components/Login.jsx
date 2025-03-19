@@ -18,7 +18,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:5001/api/login", formData);
+      const response = await axios.post("https://laundry-booking-system.onrender.com/api/login", formData);
       console.log(response.data)
       localStorage.setItem("token",response.data.token)
       localStorage.setItem("email",response.data.email)

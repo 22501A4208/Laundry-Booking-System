@@ -22,7 +22,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-        const response = await axios.post("http://localhost:5001/api/register", formData);
+        const response = await axios.post("https://laundry-booking-system.onrender.com/api/register", formData);
         toast.success(response.data.message);
         navigate("/login"); // Redirect to Login page after successful registration
     } catch (error) {

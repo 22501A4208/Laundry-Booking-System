@@ -9,7 +9,7 @@ const OrderStatus = () => {
     const fetchStatus = async () => {
       try {
         const storedToken = localStorage.getItem("token");
-        const response = await axios.get("http://localhost:5001/api/order-status", {
+        const response = await axios.get("https://laundry-booking-system.onrender.com/api/order-status", {
           headers: { Authorization: `Bearer ${storedToken}` },
         });
         setStatus(response.data.status);

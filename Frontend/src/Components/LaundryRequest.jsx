@@ -46,7 +46,7 @@ const LaundryRequest = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5001/api/laundry-request",
+        "https://laundry-booking-system.onrender.com/api/laundry-request",
         { name, ...formData },
         { headers: { Authorization: `Bearer ${storedToken}` } }
       );
